@@ -1,61 +1,31 @@
-# Mailspring Theme Starter
+# Mailspring Minimalist
 
-The Mailspring Theme Starter is a basic starting point for creating a theme for
-the [Mailspring](http://www.getmailspring.com/) email client.
+![Screenshot of the minimalist theme](screenshot/theme-screenshot.png)
 
-<img src="https://raw.githubusercontent.com/Foundry376/Mailspring-Theme-Starter/master/screenshot/custom-theme.png" />
+## Installation
 
-## Getting Started
+If you're interested in trying this theme, go ahead and:
 
-Creating a new theme in Mailspring is easy! Here's how you can do it.
+1. download a ZIP file for the latest on the [Releases](https://github.com/hstandaert/mailspring-minimalist/releases) page.
+2. Extract the contents somewhere
+3. Open Mailspring and navigate to **Mailspring > Install Theme...** in the menu
+4. Choose the folder you extracted the theme to
+5. Sit back and enjoy
 
-1. Fork this repo or download the code. Add a name, display name, title, and
-   description for your theme to `package.json`, and change the directory name
-   to match.
+This is a work-in-progress theme, so any feedback can be submitted as a [Github issue](https://github.com/hstandaert/mailspring-minimalist/issues/new).
 
-2. Open Mailspring  and install the theme by going to `Mailspring > Install New Theme...`
-   and selecting the directory.
+## Motivation
 
-3. Choose `Developer > Run With Debug Flags` for easier debugging.
+I've been using Mailspring for a while now and love how easy-to-use it is and how quickly you can navigate as a power user. However, the design felt somewhat crowded and I sometimes find it hard to keep focus on what matters.
 
-4. Now, you can start playing with the theme! It's installed in
-   `~/Library/Application Support/Mailspring/packages/THEME_NAME` (on macOS), so
-   open it from there. Most of Mailspring's React components are derived from
-   the core variables defined in `ui-variables.less`, and any changes you make
-   there will override the defaults for Mailspring. You can also add more LESS
-   files in `styles` (ideally, separated into logical components like
-   `thread-list.less`) to make your own specific changes. To reload the theme,
-   just open the console (`Developer > Toggle Developer Tools`) and type
+I believe that this can be accomplished through some extra spacing and some UI updates that soothe the eyes 👀.
 
-   ```
-   AppEnv.themes.setActiveTheme('ui-light');
-   AppEnv.themes.setActiveTheme('your-theme-name');
-   ```
+## Inspiration
 
-5. Once you're happy with your theme, check how it looks in the theme picker
-   (`Mailspring > Change Theme...`). We use your UI variables to pull the
-   colors, but if you want to add your own selections to the color palette,
-   create a `theme-colors.less` file that includes any of the variables that you
-   want to change, and they'll only affect the theme preview. Here are the
-   variables, on the left, with the part of the theme preview that they match:
+As a developer, I have some insight in what a good UI looks like. But it's another thing to create one. So I went ahead and did a quick search on Behance, which lead me to this beautiful design from [Aleksei Balashov](https://dribbble.com/addiken).
 
-   ```
-   @background-secondary:     BACKGROUND_COLOR
-   @text-color:               TEXT_COLOR, FIRST_SWATCH_COLOR
-   @component-active-color:   MIDDLE_SWATCH_COLOR
-   @toolbar-background-color: LAST_SWATCH_COLOR
-   @panel-background-color:   STRIP_COLOR
-   ```
+You can find it on [this link](https://www.behance.net/gallery/100489301/Email-Client/modules/579670751).
 
-## Structure
+## Credits
 
-```
-.
-├── styles                 # All stylesheets
-|   ├── index.less             # Main LESS file to import your stylesheets
-│   ├── ui-variables.less  # UI variables that override N1's defaults
-│   ├── theme-colors.less  # Theme colors for theme preview (optional)
-├── package.json           # Metadata about the theme
-├── LICENSE.md             # License with usage rights
-└── README.md              # Info about your theme and how to use it
-```
+I'm Helena, a full-stack web developer living in the Netherlands 👋 🇳🇱
