@@ -9,11 +9,14 @@ we don't have to do much to create a totally different look.
 Note: This file needs to be named ui-variables.less so other
 stylesheets can call `@import "ui-variables";` and reference it.
 */
+@import "fonts";
 @import "ui-variables";
+
+@import "toolbar";
 
 /*
 After changing variables to set a base for our theme, we can use
-specific, narrowly-scoped CSS rules to change other things. 
+specific, narrowly-scoped CSS rules to change other things.
 
 Tip: You can use the Developer Tools in Mailspring and "Inspect
 Element" to identify the DOM elements and styles you want to override.
@@ -23,30 +26,34 @@ here, so you can use modern CSS like -webkit-filter and -webkit-mask-image
 (which is used to make most of the icons in the app styleable via a
 background color.)
 */
-.sheet-toolbar {
-  border-bottom: 1px solid @border-color-divider;
-  box-shadow: none;
+
+.account-sidebar-sections {
+  padding: 20px;
+
+  .item-container {
+    margin: 10px 0;
+  }
 }
 
-.thread-icon:not(.thread-icon-unread):not(.thread-icon-star) {
-  -webkit-filter: invert(100%);
-}
-img.content-dark {
-  -webkit-filter: invert(100%);
-}
-img.content-light {
-  -webkit-filter: invert(100%);
+.thread-list {
+  .list-container {
+    background-color: @list-bg;
+  }
+
+  .list-item {
+    background: transparent;
+  }
+
+  .list-item:hover .list-column-HoverActions .inner {
+    background-image: linear-gradient(
+      to right,
+      fade(darken(@list-bg, 5%), 0%) 0%,
+      darken(@list-bg, 5%) 50%,
+      darken(@list-bg, 5%) 100%
+    );
+  }
 }
 
-.mail-label {
-  -webkit-filter: contrast(110%) brightness(85%);
-}
-
-#message-list .message-item-wrap .message-item-white-wrap {
-  box-shadow: 0 0 0.5px rgba(255, 255, 255, 0.28),
-    0 1px 1.5px rgba(255, 255, 255, 0.08);
-}
-
-.thread-list .list-item:not(.unread):not(.selected):not(.focused) {
-  color: #aaa;
+.message-list {
+  background-color: @messagelist-bg !important;
 }
