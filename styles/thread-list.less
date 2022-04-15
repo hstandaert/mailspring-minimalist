@@ -1,0 +1,88 @@
+.thread-list {
+  .list-container {
+    background-color: @list-bg;
+  }
+
+  .list-item {
+    position: relative;
+    color: #5a5a5a;
+    background: transparent;
+    cursor: pointer;
+    border-bottom: none;
+
+    &:hover {
+      background: darken(@list-bg, 10%);
+
+      .list-column-HoverActions .inner {
+        background-image: linear-gradient(
+          to right,
+          fade(@white, 0%) 0%,
+          @blue-dark 50%,
+          @blue-dark 100%
+        );
+      }
+    }
+
+    body.is-blurred &.focused {
+      background: @list-focused-bg;
+      border-bottom: none;
+    }
+  }
+
+  .unread:not(.focused):not(.selected) {
+    color: @text-color;
+    background: darken(@list-bg, 5%);
+
+    &:not(.next-is-selected) {
+      border-bottom: none;
+    }
+
+    &:hover {
+      background: darken(@list-bg, 10%);
+    }
+  }
+
+  .thread-icon {
+    &.thread-icon-unread {
+      position: relative;
+      &:not(:hover) {
+        background-image: none;
+      }
+
+      &::after {
+        content: "NEW";
+        font-size: 0.75em;
+        font-weight: 800;
+        color: @accent-primary;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        text-align: center;
+        line-height: 24px;
+      }
+
+      &:hover::after {
+        display: none;
+      }
+    }
+
+    &.thread-icon-attachment {
+      background: url("data:image/svg+xml,@{svg-paperclip}") no-repeat center
+        center;
+      background-size: 50%;
+    }
+  }
+}
+
+.thread-list-narrow {
+  .participants {
+    color: @text-color;
+    font-size: 16px;
+  }
+
+  .subject {
+    font-size: 13px;
+  }
+}
