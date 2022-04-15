@@ -1,18 +1,12 @@
-@import (css) url("http://fonts.cdnfonts.com/css/sf-ui-display");
+//=============================== Custom styles ===============================//
 
-@import "_icons";
-@import "ui-variables";
-@import "toolbar";
-@import "thread-list";
+//== Settings
+@import "settings/variables";
+@import "settings/fonts";
+@import "settings/icons";
 
-.account-sidebar-sections {
-  padding: 20px;
-
-  .item-container {
-    margin: 10px 0;
-  }
-}
-
-.message-list {
-  background-color: @messagelist-bg !important;
-}
+//== Components
+@import "components/toolbar";
+@import "components/account-sidebar";
+@import "components/thread-list";
+@import "components/message-list";
