@@ -1,14 +1,18 @@
 .thread-list {
   .list-container {
     background-color: @list-bg;
+
+    .list-rows {
+      background: transparent;
+    }
   }
 
   .list-item {
     position: relative;
-    color: #5a5a5a;
+    color: @gray;
     background: transparent;
     cursor: pointer;
-    border-bottom: 2px solid #e1e6f1;
+    border-bottom: none;
 
     &:hover {
       background: darken(@list-bg, 10%);
@@ -29,9 +33,10 @@
     }
   }
 
-  .unread:not(.focused):not(.selected) {
+  .list-item.unread:not(.focused):not(.selected) {
     color: @text-color;
     background: darken(@list-bg, 5%);
+    border-left-color: @accent-primary;
 
     &:not(.next-is-selected) {
       border-bottom: none;

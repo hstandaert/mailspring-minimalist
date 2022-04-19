@@ -1,7 +1,12 @@
-.sheet-toolbar {
-  height: 48px;
-  min-height: 48px;
-  max-height: 48px;
+.sheet-toolbar-container {
+  background: @white;
+}
+
+.layout-mode-list .sheet-toolbar,
+.layout-mode-split .sheet-toolbar {
+  height: 83px;
+  min-height: 83px;
+  max-height: 83px;
   border-bottom: none;
 
   .btn.btn-toolbar,
@@ -18,7 +23,8 @@
 .toolbar-RootSidebar,
 .toolbar-ThreadList,
 .toolbar-MessageList {
-  padding: 10px 0;
+  height: 100%;
+  padding: 20px 0;
 
   .item-container {
     padding: 0 12px;
@@ -26,9 +32,13 @@
 }
 
 .toolbar-RootSidebar {
-  background-color: @panel-background-color;
+  background: @panel-background-color;
 }
 
 .toolbar-ThreadList {
-  background-color: @list-bg;
+  background: @list-bg;
+}
+
+.toolbar-MessageList {
+  background: @messagelist-bg;
 }
