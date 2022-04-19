@@ -7,6 +7,7 @@
 
 //== Settings
 @import "tools/icon";
+@import "tools/override-mask-image";
 
 //== Components
 @import "components/toolbar";
@@ -14,3 +15,7 @@
 @import "components/account-sidebar";
 @import "components/thread-list";
 @import "components/message-list";
+
+.flexbox-handle-horizontal div {
+  box-shadow: none;
+}
