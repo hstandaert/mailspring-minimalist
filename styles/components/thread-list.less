@@ -74,9 +74,8 @@
     }
 
     &.thread-icon-attachment {
-      background: url("data:image/svg+xml,@{svg-paperclip}") no-repeat center
-        center;
-      background-size: 50%;
+      background: no-repeat center center/50%;
+      .icon(@svg-paperclip, @accent-primary);
     }
   }
 }

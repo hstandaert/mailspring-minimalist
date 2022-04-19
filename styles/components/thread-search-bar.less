@@ -27,9 +27,9 @@
       color: @white;
 
       padding-left: 36px;
-      background: @background-color-info
-        url("data:image/svg+xml,@{svg-info-white}") no-repeat left
+      background: @background-color-info no-repeat left
         @padding-small-horizontal top @padding-base-vertical;
+      .icon(@svg-info, @white);
       background-size: 15px auto;
 
       a {
@@ -48,8 +48,8 @@
     &.clear {
       display: block;
       box-sizing: border-box;
-      background: url("data:image/svg+xml,@{svg-x}") no-repeat center center;
-      background-size: 50%;
+      background: no-repeat center center/50%;
+      .icon(@svg-x, @gray-lighter);
       padding-left: 20px;
       cursor: pointer;
     }

@@ -1,0 +1,5 @@
+.icon(@svg-icon, @color: @text-color) {
+  @colored-icon: %(@svg-icon, @color);
+  @escaped-icon: escape(@colored-icon);
+  background-image: url("data:image/svg+xml,@{escaped-icon}");
+}
