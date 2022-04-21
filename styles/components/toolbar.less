@@ -9,10 +9,64 @@
   max-height: 83px;
   border-bottom: none;
 
+  .key-commands-region,
+  .button-group {
+    display: flex;
+    align-items: center;
+  }
+
   .btn.btn-toolbar,
   body.is-blurred & .btn.btn-toolbar {
     box-shadow: none;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    line-height: auto;
+    border-radius: 50%;
     background: transparent;
+    margin: 0 5px;
+    transition: background 0.2s ease-out;
+
+    &:not(:last-child),
+    &:last-child {
+      border-radius: 50%;
+    }
+
+    &:active {
+      background: @text-color;
+
+      img {
+        filter: brightness(0) invert(1);
+      }
+    }
+
+    img[alt="toolbar-compose.png"] {
+      .override-mask-image(@svg-pencil);
+    }
+    img[alt="toolbar-archive.png"] {
+      .override-mask-image(@svg-archive);
+    }
+    img[alt="toolbar-spam.png"] {
+      .override-mask-image(@svg-thumbs-down);
+    }
+    img[alt="toolbar-trash.png"] {
+      .override-mask-image(@svg-trash-can);
+    }
+    img[alt="toolbar-star.png"] {
+      .override-mask-image(@svg-star);
+    }
+    img[alt="toolbar-markasunread.png"] {
+      .override-mask-image(@svg-envelope);
+    }
+    img[alt="toolbar-movetofolder.png"] {
+      .override-mask-image(@svg-folder);
+    }
+    img[alt="toolbar-tag.png"] {
+      .override-mask-image(@svg-tag);
+    }
+    img[alt="toolbar-person-sidebar.png"] {
+      .override-mask-image(@svg-user);
+    }
   }
 }
 
@@ -28,6 +82,7 @@
 
   .item-container {
     padding: 0 12px;
+    align-items: center;
   }
 }
 
@@ -41,4 +96,5 @@
 
 .toolbar-MessageList {
   background: @messagelist-bg;
+  box-shadow: 0 8px 5px -5px rgba(150, 150, 150, 0.3);
 }
