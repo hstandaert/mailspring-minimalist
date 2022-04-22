@@ -1,3 +1,34 @@
-.message-list {
+#message-list {
   background-color: @messagelist-bg !important;
+
+  .messages-wrap {
+    .message-subject-wrap {
+      margin-bottom: @padding-large-vertical;
+    }
+
+    .message-subject {
+      font-size: @font-size-h1;
+      font-weight: @font-weight-bold;
+    }
+
+    .thread-injected-mail-labels {
+      height: @font-size-large * 1.8 !important;
+      display: flex;
+      align-items: center;
+    }
+
+    .scroll-region-content-inner {
+      padding: @padding-large-vertical @padding-small-horizontal;
+    }
+
+    .footer-reply-area-wrap {
+      cursor: pointer;
+      background-color: darken(@blue-lighter, 2%);
+      border-radius: @border-radius-large;
+      margin-top: @padding-large-vertical;
+      padding: @padding-base-vertical @padding-base-horizontal;
+      border: none;
+      box-shadow: 3px 3px 8px -2px @standard-shadow-color;
+    }
+  }
 }

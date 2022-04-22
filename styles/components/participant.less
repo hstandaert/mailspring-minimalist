@@ -1,0 +1,20 @@
+.participant {
+  &.selectable {
+    cursor: pointer;
+  }
+}
+
+.message-participants .participant-name {
+  display: inline-flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 @padding-xs-horizontal / 2;
+
+    .icon(@svg-circle-user, @accent-primary);
+  }
+}
